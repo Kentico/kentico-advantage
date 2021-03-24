@@ -1,6 +1,6 @@
 # Kentico Advantage site
 
-[![Build Status](https://api.travis-ci.com/Kentico/kentico-advantage.svg?branch=source)](https://travis-ci.com/Kentico/kentico-advantage)
+[![Build Status](https://github.com/kentico/kentico-advantage/actions/workflows/deploy.yml/badge.svg)](https://github.com/Kentico/kentico-advantage/actions/workflows/deploy.yml)
 [![Live](https://img.shields.io/badge/live-brightgreen.svg)](https://advantage.kentico.com)
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-cloud)
 
@@ -42,5 +42,3 @@ npm run build
 ```
 
 A successful Gatsby build triggers GitHub Pages deployment to master branch.
-    
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kentico-advantage?pixel)
