@@ -6,12 +6,11 @@
 
 This site is using [GatsbyJS](https://next.gatsbyjs.org) static site generation.
 
-Data is stored in [Kentico Cloud](https://kenticocloud.com) and provided by [Gatsby source plugin](https://github.com/Kentico/gatsby-source-kentico-cloud).
+Data is stored in [Kentico Kontent](https://kontent.ai) and provided by [Gatsby source plugin](https://github.com/Kentico/kontent-gatsby-packages).
 
 Source code for the website is stored in [source branch](https://github.com/Kentico/kentico-advantage/tree/source)
 
 ## 🚀 Quick start
-
 
 1.  **Install the dependencies**
 
@@ -34,4 +33,12 @@ Source code for the website is stored in [source branch](https://github.com/Kent
     
     *Note: You'll also see a second link: `http://localhost:8000___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
     
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kentico-advantage?pixel)
+## Release
+
+All pushes to source branch trigger:
+
+```sh
+npm run build
+```
+
+A successful Gatsby build triggers GitHub Pages deployment to master branch.
