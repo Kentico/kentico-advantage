@@ -42,5 +42,3 @@ npm run build
 ```
 
 A successful Gatsby build triggers GitHub Pages deployment to master branch.
-    
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kentico-advantage?pixel)
