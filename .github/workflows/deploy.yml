@@ -22,17 +22,22 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    
+    - name: Checkout
+      uses: actions/checkout@v2.3.1
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build
+    
+    - run: |
+        npm ci
+        npm run build
     - name: Deploy 🚀
       if: github.ref == 'refs/heads/source'
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+      uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
-        BRANCH: master
-        FOLDER: "."
-        CLEAN: false # Automatically remove deleted files from the deploy branch
+        branch: master
+        folder: public
+        clean: true # Automatically remove deleted files from the deploy branch
