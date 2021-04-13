@@ -24,6 +24,7 @@ jobs:
     steps:
       - name: Cancel redundant workflows
       - uses: technote-space/auto-cancel-redundant-workflow@v1
+      - run: echo "Cancel redundant workflows finished"
   
   build:
     name: Build
