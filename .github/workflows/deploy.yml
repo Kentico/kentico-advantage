@@ -17,8 +17,16 @@ on:
       - webhook
 
 jobs:
-  check:
+  pre-job:
+    name: Pre-job
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Cancel redundant workflows
+      - uses: technote-space/auto-cancel-redundant-workflow@v1
+  
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     strategy:
@@ -27,11 +35,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Cancel Previous Runs
-      uses: styfle/cancel-workflow-action@0.9.0
-      with:
-        access_token: ${{ github.token }}
-          
+    
     - name: Checkout
       uses: actions/checkout@v2.3.1
 
