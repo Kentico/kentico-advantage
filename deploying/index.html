@@ -42,7 +42,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 There are two basic approaches: <strong>manual</strong> and <strong>automatic </strong>deployment. In some scenarios you might <strong>combine </strong>these approaches and manually deploy a subset of the changes and automatically deploy the rest.</p>
 <ul>
   <li>Manual deployment for code generally means copying files via FTP or over a network. For manual deployment of database changes, that means duplicating the changes manually or running SQL scripts manually.</li>
-  <li>Automated deployment of code can be done with build and deployment servers or services. Database changes may also be deployed this way, but may also be handled through built-in <a href="https://docs.kentico.com/k12/configuring-kentico/setting-up-web-farms">web farm</a> features.</li>
+  <li>Automated deployment of code can be done with build and deployment servers or services. Database changes may also be deployed this way, but may also be handled through built-in <a href="https://docs.xperience.io/configuring-xperience/setting-up-web-farms">web farm</a> features.</li>
 </ul>
 <p>Regardless of the deployment mechanism, you need to determine <strong>who </strong>will be responsible for deploying changes. This may be a certain person or group for one set of changes and a different group for another set of changes.<br/>
 <br/>
@@ -52,18 +52,18 @@ Finally, the responsible party needs to know <strong>when </strong>to deploy. 
 <h2 id="h1">Deployment tools</h2>
 <p>Kentico provides two means of deploying out of the box:</p>
 <ul>
-  <li>The content <a href="https://docs.kentico.com/k12/deploying-websites/content-staging">staging</a> feature supports media files and <a href="https://docs.kentico.com/k12/deploying-websites/content-staging#Contentstaging-Whatcanbesynchronized">certain database objects</a>, but not code files.</li>
-  <li>The <a href="https://docs.kentico.com/k12/deploying-websites/exporting-and-importing-sites">export and import</a> feature supports media files and <a href="https://docs.kentico.com/k12/deploying-websites/exporting-and-importing-sites/export-folder-structure">certain code files</a> (typically only suitable for web site projects) and <a href="https://docs.kentico.com/k12/deploying-websites/exporting-and-importing-sites/exporting-objects">certain database objects</a>.</li>
+  <li>The content <a href="https://docs.xperience.io/deploying-websites/content-staging">staging</a> feature supports media files and <a href="https://docs.xperience.io/deploying-websites/content-staging#Contentstaging-Whatcanbesynchronized">certain database objects</a>, but not code files.</li>
+  <li>The <a href="https://docs.xperience.io/deploying-websites/exporting-and-importing-sites">export and import</a> feature supports media files and <a href="https://docs.xperience.io/deploying-websites/exporting-and-importing-sites/export-folder-structure">certain code files</a> (typically only suitable for web site projects) and <a href="https://docs.xperience.io/deploying-websites/exporting-and-importing-sites/exporting-objects">certain database objects</a>.</li>
 </ul>
 <p>There are lots of third party tools that can be helpful for deployment, such as <a href="http://www.bizstreamtoolkit.com/">Compare for Kentico</a>, TeamCity, Web Deploy, Redgate SQL Compare, Octopus Deploy, and many others.<br/>
 <br/>
 The following table provides a summary of tools you can use to synchronize code, media files and database objects.</p>
 <table><tbody>
   <tr><td>Kentico feature</td><td>Media files</td><td>Code</td><td>Database objects</td></tr>
-  <tr><td class="lightgray"><a href="https://docs.kentico.com/k12/deploying-websites/content-staging">Content staging</a></td><td class="green">Supported</td><td class="red">Not supported</td><td class="yellow"><a href="https://docs.kentico.com/k12/deploying-websites/content-staging#Contentstaging-Whatcanbesynchronized">Certain objects</a></td></tr>
-  <tr><td class="lightgray"><a href="https://docs.kentico.com/k12/deploying-websites/exporting-and-importing-sites">Export / Import</a></td><td class="green">Supported</td><td class="yellow"><a href="https://docs.kentico.com/k12/deploying-websites/exporting-and-importing-sites/export-folder-structure">Supported objects</a><br/>
+  <tr><td class="lightgray"><a href="https://docs.xperience.io/deploying-websites/content-staging">Content staging</a></td><td class="green">Supported</td><td class="red">Not supported</td><td class="yellow"><a href="https://docs.xperience.io/deploying-websites/content-staging#Contentstaging-Whatcanbesynchronized">Certain objects</a></td></tr>
+  <tr><td class="lightgray"><a href="https://docs.xperience.io/deploying-websites/exporting-and-importing-sites">Export / Import</a></td><td class="green">Supported</td><td class="yellow"><a href="https://docs.xperience.io/deploying-websites/exporting-and-importing-sites/export-folder-structure">Supported objects</a><br/>
 <br/>
-Note: Suitable only for the web site project.</td><td class="yellow"><a href="https://docs.kentico.com/k12/deploying-websites/exporting-and-importing-sites/exporting-objects">Certain objects</a><br/>
+Note: Suitable only for the web site project.</td><td class="yellow"><a href="https://docs.xperience.io/deploying-websites/exporting-and-importing-sites/exporting-objects">Certain objects</a><br/>
 <br/>
 Note: Not designed for incremental deployment of pages.</td></tr>
 </tbody></table>
@@ -93,7 +93,7 @@ Note: In case you work with a web site project type, you can deploy individual c
   </li>
   <li>Prepare your deployment package(s).
     <ul>
-      <li>Consider including <a href="https://docs.kentico.com/k12/deploying-websites/publishing-projects-from-visual-studio#PublishingprojectsfromVisualStudio-Precompilingwebsites">precompilation</a> to improve the performance and reduce time to first page load after deployment.</li>
+      <li>With Kentico Xperience, the back-end Admin is a Web Application and the front-end is a MVC application. Both would be build and deployed or utilizing DevOps to build dynamically.</li>
     </ul>
   </li>
   <li>Test the deployment prior to synchronizing.

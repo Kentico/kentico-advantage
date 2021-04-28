@@ -41,24 +41,24 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 <br/>
 The second is making sure that hackers are not able to exploit flaws in the implementation to gain unauthorized access to content and functionality.<br/>
 <br/>
-When it comes to Kentico, you need to consider the following:</p>
+When it comes to Kentico Xperience with MVC development you need to consider the following:</p>
 <ul>
   <li>User permissions and access control lists (ACLs)</li>
-  <li>Proper configuration of web parts</li>
+  <li>Proper configuration of controllers/views/page builder widgets</li>
   <li>Sanitization of user input to SQL injections and cross site scripting attacks</li>
   <li>Secure data storage/transfer</li>
 </ul>
-<p>Kentico administration UI, out of box controls, and APIs make it easy for you to secure your application by providing an easy to use UI, some automatic protections, and tools to make sure you are able to easily secure your code.</p>
+<p>Kentico administration UI and APIs make it easy for you to secure your application by providing an easy to use UI, some automatic protections, and tools to make sure you are able to easily secure your code.</p>
 <h2 id="h1">Performance</h2>
 <p>Many times, developers primarily focus on just making sure what they build is functional. This can lead to scalability issues, higher running costs, or even dissatisfied users.<br/>
 <br/>
 Kentico does a lot of optimization automatically, and provides lots of ways to get better performance out of your project with features like:</p>
 <ul>
-  <li>Caching in <a href="https://docs.kentico.com/k12/configuring-kentico/configuring-caching/caching-on-mvc-sites">MVC </a>or <a href="https://docs.kentico.com/k12/configuring-kentico/configuring-caching/caching-on-portal-engine-sites">Portal Engine</a></li>
+  <li>Caching in <a href="https://docs.xperience.io/configuring-xperience/configuring-caching/caching-on-mvc-sites">MVC</a></li>
   <li>APIs that can be fine tuned to retrieve only the necessary data.</li>
-  <li>Built in <a href="https://docs.kentico.com/k12/developing-websites/troubleshooting-websites/debugging">debugging</a> tools allow easy access and visibility into the inner workings of the system.</li>
+  <li>Built in <a href="https://docs.xperience.io/developing-websites/troubleshooting-websites/debugging">debugging</a> tools allow easy access and visibility into the inner workings of the system.</li>
 </ul>
-<p>It&#x27;s important to note that while Kentico does a lot of things automatically, it can be very easy to introduce performance issues. Here are a few practices to keep in mind as you develop:</p>
+<p>It&#x27;s important to note that while Kentico Xperience does a lot of things automatically, it can be very easy to introduce performance issues. Here are a few practices to keep in mind as you develop:</p>
 <ul>
   <li>Introduce as few (ideally zero) SQL queries as possible.</li>
   <li>Make sure that you have a <a href="https://docs.kentico.com/k12/configuring-kentico/configuring-caching/caching-on-portal-engine-sites/caching-best-practices-for-typical-projects">caching strategy</a> and that it is working.</li>
@@ -72,10 +72,10 @@ Kentico does a lot of optimization automatically, and provides lots of ways to g
 <br/>
 It is important to plan how what you are building will interact with its dependencies in order to avoid re-work or extra effort. This is also important when considering how to deploy new features/functionality down the line.<br/>
 <br/>
-Some examples of dependencies to think about in Kentico include:</p>
+Some examples of dependencies to think about in Kentico Xperience include:</p>
 <ul>
-  <li>Page types and content needed before being able to build a template.</li>
-  <li><a href="https://docs.kentico.com/k12/configuring-kentico/configuring-caching/setting-cache-dependencies">Cache dependencies</a> being configured properly.</li>
+  <li>Page types, content, and components needed before being able to build a page.</li>
+  <li><a href="https://docs.xperience.io/configuring-xperience/configuring-caching/setting-cache-dependencies">Cache dependencies</a> being configured properly.</li>
   <li>Code files and resource strings for a custom module class needed before developing module UI.</li>
   <li>Third party libraries must be available in .NET or as a web API before you can interact with them inside a Kentico project.</li>
   <li>Relationships between custom built features must be understood.</li>
@@ -87,12 +87,10 @@ If something is built sloppily the first time, maintenance can easily be exponen
 <br/>
 For example, you will want to pay attention to some of the following things in Kentico:</p>
 <ul>
-  <li>For web parts, use short control IDs with descriptive titles that identify the purpose and control ID (e.g. control Id: &quot;MN&quot;, Title: &quot;Main Navigation [MN]&quot;).</li>
   <li>Name code files appropriately (e.g. use the class name of the class contained in the file).</li>
-  <li>Store code files in an appropriate location in sub-directories identifying it as custom for the project and based on the namespace (e.g. /CMSWebParts/MCP/ProductConfigurator.ascx(.cs), where MCP is an abbreviation for &quot;Modular Construction Products&quot;, the site name).</li>
   <li>Use Kentico&#x27;s logging APIs to log success/failure/warning/information appropriately.</li>
   <li>Consider refactoring large methods and using abstraction layers to make code readable and reusable.</li>
-  <li>Use built-in extensibility points such as <a href="https://docs.kentico.com/k12/custom-development/handling-global-events">global events</a> or <a href="https://docs.kentico.com/k12/custom-development/customizing-providers">providers</a>.</li>
+  <li>Use built-in extensibility points such as <a href="https://docs.xperience.io/custom-development/handling-global-events">global events</a> or <a href="https://docs.xperience.io/custom-development/customizing-providers">providers</a>.</li>
   <li>Use an appropriate naming convention to avoid collisions with system objects, especially during upgrades/hotfixes (e.g. prefix things with an abbreviated version of the site/project name).</li>
 </ul>
 <h2 id="h4">User experience</h2>
@@ -121,7 +119,7 @@ However, do bear in mind that there is a need to balance the effort/time with th
   <li>The portal engine enables rapid development and flexibility.</li>
   <li>Use custom modules.</li>
   <li>Investigate event handlers.</li>
-  <li>Look for <a href="https://docs.kentico.com/k12/custom-development/customizing-providers">providers</a> to override/extend.</li>
+  <li>Look for <a href="https://docs.xperience.io/custom-development/customizing-providers">providers</a> to override/extend.</li>
 </ul>
 <h2 id="h6">Testing</h2>
 <p>You should always verify that what you&#x27;ve built functions as intended. This includes negative testing to make sure that unintended behavior is guarded against. More details on this can be found in the <a href="/testing">Testing</a> section.</p></section><section class="content-zone__ContentZoneContainer-sc-1vbngvi-0 gfEDcA"><div class="scenarios__ScenariosContainer-sc-1spr3t0-0 cjoBrE"><ul><li><h3><a class="closed" href="#!">Adding a category page with personas and secured content</a></h3></li><li><h3><a class="closed" href="#!">Integrating with an existing authorization service</a></h3></li><li><h3><a class="closed" href="#!">Automatically importing content</a></h3></li></ul></div></section><nav class="nextprev-buttons__NextPrevButtonsContainer-hzelte-0 bYbqMX"><a title="Developing in a team" class="prev" href="/developing-developing-in-a-team">Previous</a><a title="Testing" class="next" href="/testing">Next</a></nav></main><div class="right-bar__Footer-sc-17lsdio-1 kdoodF"><p>Copyright © <!-- -->2021<!-- --> Kentico Software. All rights reserved.</p><ul><li><a href="http://www.kentico.com" title="Kentico.com" target="_blank" rel="noopener noreferrer">Kentico main website</a></li></ul></div></div></div><div class="cookie-consent-html__ConsentWrapper-sc-7ldqwu-0 fmQtKg"></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/developing-implementing-best-practices/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3f99b51aa82fcaeb5543.js"],"app":["/app-3d5a2ab43545d458d7a4.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-1019110dddd354e6e07c.js"],"component---src-pages-404-js":["/component---src-pages-404-js-b86e61a78df7411ccea5.js"],"component---src-pages-index-js":["/component---src-pages-index-js-346ac485d3efb96c38d4.js"],"component---src-pages-kontent-item-page-elements-url-value-js":["/component---src-pages-kontent-item-page-elements-url-value-js-9d6328006e09c11410df.js"],"component---src-pages-kontent-item-phase-elements-url-value-js":["/component---src-pages-kontent-item-phase-elements-url-value-js-c020d7cbb07d0cb76af7.js"],"component---src-pages-search-js":["/component---src-pages-search-js-a1425d5c69da681c601d.js"]};/*]]>*/</script><script src="/polyfill-3f99b51aa82fcaeb5543.js" nomodule=""></script><script src="/component---src-pages-kontent-item-phase-elements-url-value-js-c020d7cbb07d0cb76af7.js" async=""></script><script src="/260cb190d14a9f629e247f1a4e11aa7308b45c37-faf03e26b29f59a36bfc.js" async=""></script><script src="/effb67ce0648a7107cade80b8f63c2fdc8e05ccd-8b03c485cf42a54b5aa1.js" async=""></script><script src="/app-3d5a2ab43545d458d7a4.js" async=""></script><script src="/framework-58f863d6aa18c11a521f.js" async=""></script><script src="/webpack-runtime-3601f862d19f069ce174.js" async=""></script></body></html>
