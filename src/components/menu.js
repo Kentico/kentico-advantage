@@ -220,7 +220,7 @@ class Menu extends React.Component
                                     <header>
                                         <Link to="/">
                                             <img
-                                                src={withPrefix('/assets/img/kentico_rgb_small.png')}
+                                                src={withPrefix('/assets/img/xperience_advantagel.png')}
                                                 alt="Kentico Advantage" />
                                         </Link>
                                     </header>
