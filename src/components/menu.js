@@ -82,31 +82,6 @@ const LeftBar = styled.div.attrs({
     `}
 `;
 
-const PoweredBy = styled.div`
-    display: flex;
-    flex-grow: 1;
-    align-items: flex-end;
-    text-align: center;
-    padding-bottom: 15px;
-
-    .powered-by-title {
-      margin: 24px;
-      font-size: 14px;
-    }
-
-    img {
-      height:60px
-    }
-
-    a
-    {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        align-items: center;
-    }
-`;
-
 class Menu extends React.Component
 {
     render(){
@@ -220,7 +195,7 @@ class Menu extends React.Component
                                     <header>
                                         <Link to="/">
                                             <img
-                                                src={withPrefix('/assets/img/kentico_rgb_small.png')}
+                                                src={withPrefix('/assets/img/xperience_advantagel.png')}
                                                 alt="Kentico Advantage" />
                                         </Link>
                                     </header>
@@ -230,14 +205,7 @@ class Menu extends React.Component
                                         </ul>
                                     </nav>
                                     
-                                    <PoweredBy>
-                                      <div className="powered-by-title">
-                                        Powered by
-                                      </div>
-                                        <a href="https://kontent.ai/">
-                                            <img src="../assets/img/powered-by-kk.png" alt="KK"/>
-                                        </a>
-                                    </PoweredBy>
+
                                 </LeftBar>
                         )
                     }}
