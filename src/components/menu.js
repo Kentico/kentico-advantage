@@ -82,31 +82,6 @@ const LeftBar = styled.div.attrs({
     `}
 `;
 
-const PoweredBy = styled.div`
-    display: flex;
-    flex-grow: 1;
-    align-items: flex-end;
-    text-align: center;
-    padding-bottom: 15px;
-
-    .powered-by-title {
-      margin: 24px;
-      font-size: 14px;
-    }
-
-    img {
-      height:60px
-    }
-
-    a
-    {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        align-items: center;
-    }
-`;
-
 class Menu extends React.Component
 {
     render(){
