@@ -230,14 +230,7 @@ class Menu extends React.Component
                                         </ul>
                                     </nav>
                                     
-                                    <PoweredBy>
-                                      <div className="powered-by-title">
-                                        Powered by
-                                      </div>
-                                        <a href="https://kontent.ai/">
-                                            <img src="../assets/img/powered-by-kk.png" alt="KK"/>
-                                        </a>
-                                    </PoweredBy>
+
                                 </LeftBar>
                         )
                     }}
